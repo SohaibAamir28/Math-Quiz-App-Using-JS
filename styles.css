@@ -1,0 +1,82 @@
+body {
+    background-image: url('bg.jpg'); /* Replace 'background.jpg' with the path to your background image */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Set text color to white */
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 24px;
+}
+
+#quizContainer {
+    margin-top: 20px;
+    opacity: 0;
+    animation: slideIn 0.5s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.question-container {
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+input {
+    margin-right: 10px;
+    opacity: 0;
+    animation: slideIn 0.5s ease-in-out forwards;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideIn 0.5s ease-in-out forwards;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    #quizContainer {
+        margin-top: 10px;
+    }
+
+    .question-container {
+        margin-top: 10px;
+    }
+
+    input, button {
+        font-size: 14px;
+    }
+}
